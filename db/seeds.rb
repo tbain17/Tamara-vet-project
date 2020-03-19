@@ -50,7 +50,7 @@ owner3.save()
 pet1 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -61,7 +61,7 @@ pet1 = Pet.new(
 pet2 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -72,7 +72,7 @@ pet2 = Pet.new(
 pet3 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -83,7 +83,7 @@ pet3 = Pet.new(
 pet4 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -94,7 +94,7 @@ pet4 = Pet.new(
 pet5 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -105,7 +105,7 @@ pet5 = Pet.new(
 pet6 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -116,7 +116,7 @@ pet6 = Pet.new(
 pet7 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
@@ -127,7 +127,7 @@ pet7 = Pet.new(
 pet8 = Pet.new(
   {
     'name' => '',
-    'DoB' => '',
+    'dob' => '',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => '',
