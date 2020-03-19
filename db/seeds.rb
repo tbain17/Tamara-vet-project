@@ -9,17 +9,20 @@ require("pry-byebug")
 
 vet1 = Vet.new (
   {
-    'name' => ''
+    'first_name' => 'Benedict',
+    'last_name' => 'Sondheim'
   }
 )
 vet2 = Vet.new (
   {
-    'name' => ''
+    'first_name' => 'Gertrude',
+    'last_name' => 'Lemons'
   }
 )
 vet3 = Vet.new (
   {
-    'name' => ''
+    'first_name' => 'Alexandria',
+    'last_name' => 'Jenkins'
   }
 )
 
@@ -29,17 +32,20 @@ vet3.save()
 
 owner1 = Owner.new(
   {
-    'name' => ''
+    'first_name' => 'Richard',
+    'last_name' => 'Sanders'
   }
 )
 owner2 = Owner.new(
   {
-    'name' => ''
+    'first_name' => 'Leslie',
+    'last_name' => 'Hamilton'
   }
 )
 owner3 = Owner.new(
   {
-    'name' => ''
+    'first_name' => 'Laura',
+    'last_name' => 'Lumpkin'
   }
 )
 
@@ -49,98 +55,61 @@ owner3.save()
 
 pet1 = Pet.new(
   {
-    'name' => '',
-    'dob' => '',
+    'name' => 'Alexios',
+    'dob' => '01/06/2006',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
-    'type' => '',
+    'type' => 'iguana',
     'notes' => ''
   }
 )
 
 pet2 = Pet.new(
   {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
-    'owner_id' => owner2.id,
-    'type' => '',
+    'name' => 'Hugo',
+    'dob' => '13/09/2019',
+    'vet_id' => vet2.id,
+    'owner_id' => owner3.id,
+    'type' => 'clown fish',
     'notes' => ''
   }
 )
 
 pet3 = Pet.new(
   {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
-    'owner_id' => owner2.id,
-    'type' => '',
+    'name' => 'Stanley',
+    'dob' => '02/02/2017',
+    'vet_id' => vet2.id,
+    'owner_id' => owner1.id,
+    'type' => 'guinea pig',
     'notes' => ''
   }
 )
 
 pet4 = Pet.new(
   {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
+    'name' => 'Humphrey',
+    'dob' => '17/05/2011',
+    'vet_id' => vet3.id,
     'owner_id' => owner2.id,
-    'type' => '',
+    'type' => 'dog',
     'notes' => ''
   }
 )
 
 pet5 = Pet.new(
   {
-    'name' => '',
-    'dob' => '',
+    'name' => 'Pricilla',
+    'dob' => '19/01/2018',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
-    'type' => '',
+    'type' => 'cat',
     'notes' => ''
   }
 )
-
-pet6 = Pet.new(
-  {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
-    'owner_id' => owner2.id,
-    'type' => '',
-    'notes' => ''
-  }
-)
-
-pet7 = Pet.new(
-  {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
-    'owner_id' => owner2.id,
-    'type' => '',
-    'notes' => ''
-  }
-)
-
-pet8 = Pet.new(
-  {
-    'name' => '',
-    'dob' => '',
-    'vet_id' => vet1.id,
-    'owner_id' => owner2.id,
-    'type' => '',
-    'notes' => ''
-  }
-)
-
 
 pet1.save()
 pet2.save()
 pet3.save()
 pet4.save()
 pet5.save()
-pet6.save()
-pet7.save()
-pet8.save()

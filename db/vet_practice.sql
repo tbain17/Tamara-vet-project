@@ -5,13 +5,15 @@ DROP TABLE vets;
 CREATE TABLE vets
 (
   id SERIAL primary key,
-  name VARCHAR(255) not null
+  first_name VARCHAR(255) not null,
+  last_name VARCHAR(255) not null
 );
 
 CREATE TABLE owners
 (
   id SERIAL primary key,
-  name VARCHAR(255) not null
+  first_name VARCHAR(255) not null,
+  last_name VARCHAR(255) not null
 );
 
 CREATE TABLE pets

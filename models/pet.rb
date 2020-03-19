@@ -35,5 +35,30 @@ class Pet
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM pets"
+    results = SqlRunner.run(sql)
+    return results.map {|pet| Pet.new(pet)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM pets WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Pet.new(results.first)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM pets"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM pets WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
+
 
 end
