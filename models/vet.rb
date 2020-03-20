@@ -27,6 +27,10 @@ class Vet
     @id = results.first()['id'].to_i
   end
 
+  def joined_name()
+    return "#{@first_name} #{@last_name}"
+  end
+
   def self.all()
     sql = "SELECT * FROM vets"
     results = SqlRunner.run(sql)

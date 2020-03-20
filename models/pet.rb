@@ -35,6 +35,20 @@ class Pet
     @id = results.first()['id'].to_i
   end
 
+  def vet()
+    sql = "SELECT * FROM vets WHERE id = $1"
+    values = [@vet_id]
+    result = SqlRunner.run(sql, values)
+    return Vet.new(result.first)
+  end
+  
+  def owner()
+    sql = "SELECT * FROM owners WHERE id = $1"
+    values = [@owner_id]
+    result = SqlRunner.run(sql, values)
+    return Owner.new(result.first)
+  end
+
   def self.all()
     sql = "SELECT * FROM pets"
     results = SqlRunner.run(sql)

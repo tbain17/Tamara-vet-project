@@ -7,6 +7,6 @@ require_relative('../models/pet')
 also_reload('../models/*')
 
 get '/pets' do
-  @pets = Pets.all()
+  @pets = Pet.all()
   erb (:"pets/index")
 end

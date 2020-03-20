@@ -1,0 +1,6 @@
+<h1>Pet owners of Ruby Vetinary Practice</h1>
+<% for owner in @owners %>
+<p>Name: <%= owner.joined_name() %></p>
+<p>Pets: <% for pet in owner.pets() %><%= pet.name %></p>
+<p><% end %></p>
+<p><% end %></p>

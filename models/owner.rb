@@ -27,6 +27,17 @@ class Owner
     @id = results.first()['id'].to_i
   end
 
+  def joined_name()
+    return "#{@first_name} #{@last_name}"
+  end
+
+  def pets()
+    sql = "SELECT * FROM pets WHERE owner_id = $1"
+    values = [@id]
+    pets = SqlRunner.run(sql, values)
+    return pets.map{|pet|Pet.new(pet)}
+  end
+
   def self.all()
     sql = "SELECT * FROM owners"
     results = SqlRunner.run(sql)
