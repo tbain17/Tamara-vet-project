@@ -10,3 +10,12 @@ get '/vets' do
   @vets = Vet.all()
   erb (:"vets/index")
 end
+
+get '/vets/new' do
+  erb(:"vets/new")
+end
+
+post '/vets' do
+  Vet.new(params).save()
+  redirect to ('/vets')
+end
