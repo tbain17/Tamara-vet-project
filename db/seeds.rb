@@ -3,26 +3,29 @@ require_relative( "../models/vet" )
 require_relative( "../models/pet" )
 require("pry-byebug")
 
-# Pet.delete_all()
-# Owner.delete_all()
-# Vet.delete_all()
+Pet.delete_all()
+Owner.delete_all()
+Vet.delete_all()
 
 vet1 = Vet.new (
   {
     'first_name' => 'Benedict',
-    'last_name' => 'Sondheim'
+    'last_name' => 'Sondheim',
+    'specialty' => 'small animals'
   }
 )
 vet2 = Vet.new (
   {
     'first_name' => 'Gertrude',
-    'last_name' => 'Lemons'
+    'last_name' => 'Lemons',
+    'specialty' => 'surgery'
   }
 )
 vet3 = Vet.new (
   {
     'first_name' => 'Alexandria',
-    'last_name' => 'Jenkins'
+    'last_name' => 'Jenkins',
+    'specialty' => 'critial care'
   }
 )
 

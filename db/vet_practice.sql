@@ -6,7 +6,8 @@ CREATE TABLE vets
 (
   id SERIAL primary key,
   first_name VARCHAR(255) not null,
-  last_name VARCHAR(255) not null
+  last_name VARCHAR(255) not null,
+  specialty VARCHAR(255)
 );
 
 CREATE TABLE owners
