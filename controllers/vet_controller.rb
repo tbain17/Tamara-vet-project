@@ -33,5 +33,4 @@ end
 post '/vets/:id' do
   Vet.new(params).update()
   redirect to ('/vets')
-
 end

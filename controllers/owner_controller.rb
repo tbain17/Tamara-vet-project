@@ -19,3 +19,18 @@ post '/owners' do
   Owner.new(params).save
   erb(:"owners/created")
 end
+
+get '/owners/:id' do
+  @owner = Owner.find(params[:id].to_i())
+  erb (:show)
+end
+
+get '/owners/:id/edit' do
+  @owner = Owner.find(params[:id].to_i())
+  erb(:"owners/edit")
+end
+
+post '/owners/:id' do
+  Owner.new(params).update()
+  redirect to ('/owners')
+end

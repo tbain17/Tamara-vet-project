@@ -31,6 +31,23 @@ class Owner
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE owners SET
+    (
+      first_name,
+      last_name,
+      phone_number,
+      email
+    )
+    =
+    (
+      $1, $2, $3, $4
+    )
+    WHERE id = $5"
+    values = [@first_name, @last_name, @phone_number, @email, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def joined_name()
     return "#{@first_name} #{@last_name}"
   end

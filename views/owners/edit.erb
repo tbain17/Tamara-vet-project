@@ -1,0 +1,15 @@
+<form method = "post" action = "/owners/<%= @owner.id %>">
+  <label for="first-name">First Name:</label>
+    <input id = "first-name" type="text" name="first_name" value="<%= @owner.first_name %>"/>
+
+  <label for="last-name">Last Name:</label>
+    <input id = "last-name" type="text" name="last_name" value="<%= @owner.last_name %>"/>
+
+  <label for="phone-number">Contact Number:</label>
+    <input id = "phone-number" type="text" name="phone_number" value="<%= @owner.phone_number %>"/>
+
+  <label for="e-mail">Email:</label>
+    <input id = "e-mail" type="text" name="email" value="<%= @owner.email %>"/>
+
+  <input type="submit" value="Submit Changes"/>
+</form>
