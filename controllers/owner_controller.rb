@@ -17,5 +17,5 @@ end
 
 post '/owners' do
   Owner.new(params).save
-  redirect to('/owners')
+  erb(:"owners/created")
 end
