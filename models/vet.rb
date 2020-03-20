@@ -33,6 +33,22 @@ class Vet
     return "#{@first_name} #{@last_name}"
   end
 
+  def update()
+    sql = "UPDATE vets SET
+    (
+      first_name,
+      last_name,
+      specialty
+    )
+    =
+    (
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@first_name, @last_name, @specialty, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM vets"
     results = SqlRunner.run(sql)

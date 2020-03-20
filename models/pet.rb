@@ -35,13 +35,32 @@ class Pet
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE pets SET
+    (
+      name,
+      dob,
+      vet_id,
+      owner_id,
+      type,
+      notes
+    )
+    =
+    (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@name, @dob, @vet_id, @owner_id, @type, @notes, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def vet()
     sql = "SELECT * FROM vets WHERE id = $1"
     values = [@vet_id]
     result = SqlRunner.run(sql, values)
     return Vet.new(result.first)
   end
-  
+
   def owner()
     sql = "SELECT * FROM owners WHERE id = $1"
     values = [@owner_id]

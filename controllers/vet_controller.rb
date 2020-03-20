@@ -19,3 +19,19 @@ post '/vets' do
   Vet.new(params).save()
   redirect to ('/vets')
 end
+
+get '/vets/:id' do
+  @vet = Vet.find(params[:id].to_i())
+  erb (:show)
+end
+
+get '/vets/:id/edit' do
+  @vet = Vet.find(params[:id].to_i())
+  erb(:"vets/edit")
+end
+
+post '/vets/:id' do
+  Vet.new(params).update()
+  redirect to ('/vets')
+
+end

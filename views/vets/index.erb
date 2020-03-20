@@ -2,5 +2,6 @@
 <% for vet in @vets %>
 <p>Name: <%= vet.joined_name() %></p>
 <p>Specialty: <%= vet.specialty %></p>
+<a href="/vets/<%= vet.id %>/edit">Edit vet</a>
 <p><% end %></p>
 <a href="/vets/new">Add new vet</a>
