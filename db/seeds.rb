@@ -36,19 +36,25 @@ vet3.save()
 owner1 = Owner.new(
   {
     'first_name' => 'Richard',
-    'last_name' => 'Sanders'
+    'last_name' => 'Sanders',
+    'phone_number' => '01234 567890',
+    'email' => 'R.Sand@email.com'
   }
 )
 owner2 = Owner.new(
   {
     'first_name' => 'Leslie',
-    'last_name' => 'Hamilton'
+    'last_name' => 'Hamilton',
+    'phone_number' => '01234 555909',
+    'email' => 'leshami@here.co.uk'
   }
 )
 owner3 = Owner.new(
   {
     'first_name' => 'Laura',
-    'last_name' => 'Lumpkin'
+    'last_name' => 'Lumpkin',
+    'phone_number' => '01234 234013',
+    'email' => 'Lauralumpkin1337@email.com'
   }
 )
 

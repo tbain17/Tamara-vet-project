@@ -14,7 +14,9 @@ CREATE TABLE owners
 (
   id SERIAL primary key,
   first_name VARCHAR(255) not null,
-  last_name VARCHAR(255) not null
+  last_name VARCHAR(255) not null,
+  phone_number VARCHAR(255),
+  email VARCHAR(255)
 );
 
 CREATE TABLE pets
