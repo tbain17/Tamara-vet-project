@@ -38,3 +38,8 @@ post '/pets/:id' do
   Pet.new(params).update()
   redirect to ('/pets')
 end
+
+post '/pets/:id/delete' do
+  Pet.delete(params[:id].to_i())
+  redirect to('/pets')
+end
