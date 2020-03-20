@@ -10,3 +10,9 @@ get '/pets' do
   @pets = Pet.all()
   erb (:"pets/index")
 end
+
+get '/pets/new' do
+  @vets = Vet.all()
+  @owners = Owner.all()
+  erb(:"pets/new")
+end
