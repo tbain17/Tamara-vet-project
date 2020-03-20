@@ -21,3 +21,20 @@ post '/pets' do
   Pet.new(params).save()
   redirect to('/pets')
 end
+
+get '/pets/:id' do
+  @pet = Pet.find(params[:id].to_i())
+  erb (:"pets/show")
+end
+
+get '/pets/:id/edit' do
+  @vets = Vet.all()
+  @owners = Owner.all()
+  @pet = Pet.find(params[:id].to_i())
+  erb(:"pets/edit")
+end
+
+post '/pets/:id' do
+  Pet.new(params).update()
+  redirect to ('/pets')
+end

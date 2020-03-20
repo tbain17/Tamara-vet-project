@@ -6,5 +6,6 @@
 <p>Owner: <%= pet.owner().joined_name() %></p>
 <p>Vet: <%= pet.vet().joined_name() %></p>
 <p>Notes: <%= pet.notes %></p>
+<a href="/pets/<%= pet.id %>/edit">Edit pet</a>
 <p><% end %></p>
 <a href="/pets/new">Add New Pet</a>
