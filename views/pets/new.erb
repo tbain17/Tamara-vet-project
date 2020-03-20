@@ -1,0 +1,26 @@
+<form method = "post" action = "/pets">
+  <label for="name">Name:</label>
+    <input id = "name" type="text" name="name"/>
+
+  <label for="type-of-pet">Pet type:</label>
+    <input id = "type-of-pet" type="text" name="type"/>
+
+  <label for="date-of-birth">Date of Birth:</label>
+    <input id = "date-of-birthr" type="text" name="dob"/>
+
+  <label for="owner">Owner:</label>
+    <select id = "owner-select" name="owner_id">
+      <% for owner in @owners %>
+      <option value="<%= owner.id %>"><%= owner.joined_name() %></option>
+      <% end %>
+    </select>
+
+  <label for="vet">Assign pet to vet:</label>
+    <select id = "vet-select" name="vet_id">
+      <% for vet in @vets %>
+      <option value="<%= vet.id %>"><%= vet.joined_name() %></option>
+      <% end %>
+    </select>
+
+  <input type="submit" value="Add pet"/>
+</form>
