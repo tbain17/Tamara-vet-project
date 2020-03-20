@@ -22,7 +22,7 @@ end
 
 get '/vets/:id' do
   @vet = Vet.find(params[:id].to_i())
-  erb (:show)
+  erb (:"vets/show")
 end
 
 get '/vets/:id/edit' do

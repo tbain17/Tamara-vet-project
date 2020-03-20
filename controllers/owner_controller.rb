@@ -22,7 +22,7 @@ end
 
 get '/owners/:id' do
   @owner = Owner.find(params[:id].to_i())
-  erb (:show)
+  erb (:"owners/show")
 end
 
 get '/owners/:id/edit' do
