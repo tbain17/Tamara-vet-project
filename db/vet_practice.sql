@@ -1,4 +1,5 @@
 DROP TABLE pets;
+DROP TABLE rooms;
 DROP TABLE owners;
 DROP TABLE vets;
 
@@ -17,6 +18,12 @@ CREATE TABLE owners
   last_name VARCHAR(255) not null,
   phone_number VARCHAR(255),
   email VARCHAR(255)
+);
+
+CREATE TABLE rooms
+(
+  id SERIAL primary key,
+  name VARCHAR(255)
 );
 
 CREATE TABLE pets
