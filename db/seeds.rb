@@ -62,6 +62,13 @@ owner1.save()
 owner2.save()
 owner3.save()
 
+room1 = Room.new(
+  {
+    'name' => 'Room 1'
+  }
+)
+room1.save()
+
 pet1 = Pet.new(
   {
     'name' => 'Alexios',

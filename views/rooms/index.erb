@@ -1,7 +1,6 @@
 <h1>Rooms of Ruby Vetinary Practice</h1>
 <% for room in @rooms %>
 <p>Name: <a href="/rooms/<%= room.id %>"><%= room.name %></a></p>
-<p>Type: <%= pet.type %></p>
 <a href="/rooms/<%= room.id %>/edit">Edit room</a>
 <p><% end %></p>
-<a href="/pets/new">Add New Pet</a>
+<a href="/rooms/new">Add New Room</a>
