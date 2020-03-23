@@ -1,11 +1,13 @@
 require_relative( "../models/owner" )
 require_relative( "../models/vet" )
 require_relative( "../models/pet" )
+require_relative( "../models/room" )
 require("pry-byebug")
 
 Pet.delete_all()
 Owner.delete_all()
 Vet.delete_all()
+Room.delete_all()
 
 vet1 = Vet.new (
   {
@@ -68,6 +70,13 @@ room1 = Room.new(
   }
 )
 room1.save()
+
+room2 = Room.new(
+  {
+    'name' => 'Room 2'
+  }
+)
+room2.save()
 
 pet1 = Pet.new(
   {

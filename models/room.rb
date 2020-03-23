@@ -31,4 +31,22 @@ class Room
     return results.map {|room| Room.new(room)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM rooms WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Room.new(results.first)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM rooms"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM rooms WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 end
