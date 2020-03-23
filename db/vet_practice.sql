@@ -2,6 +2,7 @@ DROP TABLE pets;
 DROP TABLE rooms;
 DROP TABLE owners;
 DROP TABLE vets;
+DROP TABLE treatments;
 
 CREATE TABLE vets
 (
@@ -24,6 +25,12 @@ CREATE TABLE rooms
 (
   id SERIAL primary key,
   name VARCHAR(255)
+);
+
+CREATE TABLE treatments
+(
+  id SERIAL primary key,
+  type VARCHAR(255)
 );
 
 CREATE TABLE pets

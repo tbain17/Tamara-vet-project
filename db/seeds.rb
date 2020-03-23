@@ -1,13 +1,15 @@
-require_relative( "../models/owner" )
-require_relative( "../models/vet" )
-require_relative( "../models/pet" )
-require_relative( "../models/room" )
+require_relative("../models/owner")
+require_relative("../models/vet")
+require_relative("../models/pet")
+require_relative("../models/room")
+require_relative("../models/treatment")
 require("pry-byebug")
 
 Pet.delete_all()
 Owner.delete_all()
 Vet.delete_all()
 Room.delete_all()
+Treatment.delete_all()
 
 vet1 = Vet.new (
   {

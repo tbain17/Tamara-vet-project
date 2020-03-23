@@ -25,4 +25,28 @@ class Treatment
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM treatments"
+    results = SqlRunner.run(sql)
+    return results.map {|treatment| Treatment.new(treatment)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM treatments WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Treatment.new(results.first)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM treatments"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM treatments WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 end
