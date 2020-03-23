@@ -69,7 +69,6 @@ room1 = Room.new(
     'name' => 'Room 1'
   }
 )
-room1.save()
 
 room2 = Room.new(
   {
@@ -77,6 +76,21 @@ room2 = Room.new(
   }
 )
 room2.save()
+room1.save()
+
+treatment1 = Treatment.new(
+  {
+    'type' => 'surgery'
+  }
+)
+
+treatment2 = Treatment.new(
+  {
+    'type' => 'claw trim'
+  }
+)
+treatment1.save()
+treatment2.save()
 
 pet1 = Pet.new(
   {

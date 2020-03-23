@@ -10,4 +10,19 @@ class Treatment
     @type = options['type']
   end
 
+  def save()
+    sql = "INSERT INTO treatments
+    (
+      type
+    )
+    VALUES
+    (
+      $1
+    )
+    RETURNING id"
+    values = [@type]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
+  end
+
 end

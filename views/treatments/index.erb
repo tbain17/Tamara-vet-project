@@ -1,0 +1,6 @@
+<h1>Available Treatments</h1>
+<p><% for treatment in @treatments %></p>
+<p><%= treatment.type %></p>
+<p><a href="/treatment/<%= treatment.id %>/edit">Edit Treatment</a></p>
+<p><a href="/treatment/<%= treatment.id %>/delete">Delete Treatment</a></p>
+<% end %>
