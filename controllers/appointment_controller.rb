@@ -25,3 +25,21 @@ post '/appointments' do
   Appointment.new(params).save
   redirect to ('/appointments')
 end
+
+get '/appointments/:id' do
+  @appointment = Appointment.find(params[:id].to_i())
+  erb (:"appointment/show")
+end
+
+get '/appointments/:id/edit' do
+  @pets = Pet.all()
+  @rooms = Room.all()
+  @treatments = Treatment.all()
+  @appointment = Appointment.find(params[:id].to_i())
+  erb(:"appointments/edit")
+end
+
+post '/appointments/:id' do
+  Appointment.new(params).update()
+  redirect to ('/appointments')
+end
