@@ -25,6 +25,16 @@ class Room
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE rooms SET
+      name
+    =
+      $1
+    WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM rooms"
     results = SqlRunner.run(sql)

@@ -22,3 +22,18 @@ post '/rooms' do
   Room.new(params).save()
   redirect to('/rooms')
 end
+
+get '/rooms/:id' do
+  @room = Room.find(params[:id].to_i())
+  erb (:"rooms/show")
+end
+
+get '/rooms/:id/edit' do
+  @room = Room.find(params[:id].to_i())
+  erb(:"rooms/edit")
+end
+
+post '/rooms/:id' do
+  Room.new(params).update()
+  redirect to ('/rooms')
+end

@@ -1,0 +1,6 @@
+<form method = "post" action = "/rooms/<%= @room.id %>">
+  <label for="room_nmae">Room Name:</label>
+    <input id = "room_name" type="text" name="name" value="<%= @room.name %>"/>
+
+  <input type="submit" value="Submit Changes"/>
+</form>
