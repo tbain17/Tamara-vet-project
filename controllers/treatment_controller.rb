@@ -13,3 +13,12 @@ get '/treatments' do
   @treatments = Treatment.all()
   erb (:"treatments/index")
 end
+
+get '/treatments/new' do
+  erb(:"treatments/new")
+end
+
+post '/treatments' do
+  Treatment.new(params).save()
+  redirect to('/treatments')
+end
