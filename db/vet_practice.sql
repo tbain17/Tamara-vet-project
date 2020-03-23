@@ -1,3 +1,4 @@
+DROP TABLE appointments;
 DROP TABLE pets;
 DROP TABLE rooms;
 DROP TABLE owners;
@@ -42,4 +43,13 @@ CREATE TABLE pets
   owner_id INT REFERENCES owners(id) ON DELETE CASCADE,
   type VARCHAR(255),
   notes VARCHAR(255)
+);
+
+CREATE TABLE appointments
+(
+  id SERIAL primary key,
+  pet_id INT REFERENCES pets(id) ON DELETE CASCADE,
+  room_id INT REFERENCES rooms(id) ON DELETE CASCADE,
+  treatment_id INT REFERENCES treatments(id) ON DELETE CASCADE,
+  time VARCHAR(255)
 );
