@@ -5,7 +5,7 @@
 <p>Owner: <a href="/owners/<%= @pet.owner_id %>"><%= @pet.owner.joined_name() %></a></p>
 <p>Vet: <a href="/vets/<%= @pet.vet_id %>"><%= @pet.vet.joined_name() %></a></p>
 <p>Notes: <%= @pet.notes %></p>
-<a href=/pets/<%= @pet.id %>/edit">Edit pet</a>
+<a href="/pets/<%= @pet.id %>/edit">Edit pet</a>
 <form action="/pets/<%= @pet.id %>/delete" method="post">
     <input type="submit" value="Delete pet"/>
 </form>
