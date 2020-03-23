@@ -28,7 +28,7 @@ end
 
 get '/appointments/:id' do
   @appointment = Appointment.find(params[:id].to_i())
-  erb (:"appointment/show")
+  erb (:"appointments/show")
 end
 
 get '/appointments/:id/edit' do
