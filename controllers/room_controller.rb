@@ -13,3 +13,12 @@ get '/rooms' do
   @rooms = Room.all()
   erb (:"rooms/index")
 end
+
+get '/rooms/new' do
+  erb(:"rooms/new")
+end
+
+post '/rooms' do
+  Room.new(params).save()
+  redirect to('/rooms')
+end
