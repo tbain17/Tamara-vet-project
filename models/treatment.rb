@@ -27,13 +27,9 @@ class Treatment
 
   def update()
     sql = "UPDATE treatments SET
-    (
       type
-    )
     =
-    (
       $1
-    )
     WHERE id = $2"
     values = [@type, @id]
     SqlRunner.run(sql, values)

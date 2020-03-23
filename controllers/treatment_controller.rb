@@ -23,6 +23,11 @@ post '/treatments' do
   redirect to('/treatments')
 end
 
+get '/treatments/:id' do
+  @treatment = Treatment.find(params[:id].to_i())
+  erb (:"treatments/show")
+end
+
 get '/treatments/:id/edit' do
   @treatment = Treatment.find(params[:id].to_i())
   erb(:"treatments/edit")

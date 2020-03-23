@@ -1,0 +1,6 @@
+<h1>Treatment Details</h1>
+<p>Type: <%= @treatment.type %></p>
+<a href="/treatments/<%= @treatment.id %>/edit">Edit treatment</a>
+<form action="/treatments/<%= @treatment.id %>/delete" method="post">
+    <input type="submit" value="Delete treatment"/>
+</form>
