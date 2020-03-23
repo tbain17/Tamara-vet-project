@@ -32,7 +32,7 @@ class Appointment
   end
 
   def update()
-    sql = "UPDATE owners SET
+    sql = "UPDATE appointments SET
     (
       pet_id,
       room_id,

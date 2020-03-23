@@ -1,4 +1,4 @@
-<form method = "post" action = "/appointments/<%= @appointment.id %>/edit">
+<form method = "post" action = "/appointments/<%= @appointment.id %>">
   <label for="pet-name">Pet Name:</label>
     <select id = "pet-select" name="pet_id">
       <% for pet in @pets %>
@@ -23,5 +23,5 @@
   <label for="time">Time:</label>
     <input id = "time" type="text" name="time" value="<%= @appointment.time %>"/>
 
-  <input type="submit" value="Add appointment"/>
+  <input type="submit" value="Submit changes"/>
 </form>
