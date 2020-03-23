@@ -25,6 +25,20 @@ class Treatment
     @id = results.first()['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE treatments SET
+    (
+      type
+    )
+    =
+    (
+      $1
+    )
+    WHERE id = $2"
+    values = [@type, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.all()
     sql = "SELECT * FROM treatments"
     results = SqlRunner.run(sql)
