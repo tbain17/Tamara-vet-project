@@ -1,0 +1,6 @@
+<h1>Room Details</h1>
+<p>Name: <%= @room.name %></p>
+<a href="/rooms/<%= @room.id %>/edit">Edit room</a>
+<form action="/rooms/<%= @room.id %>/delete" method="post">
+    <input type="submit" value="Delete room"/>
+</form>
