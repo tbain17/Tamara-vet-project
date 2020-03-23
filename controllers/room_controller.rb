@@ -37,3 +37,8 @@ post '/rooms/:id' do
   Room.new(params).update()
   redirect to ('/rooms')
 end
+
+post '/rooms/:id/delete' do
+  Room.delete(params[:id].to_i())
+  redirect to('/rooms')
+end
