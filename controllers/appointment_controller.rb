@@ -13,3 +13,15 @@ get '/appointments' do
   @appointments = Appointment.all()
   erb (:"appointments/index")
 end
+
+get '/appointments/new' do
+  @pets = Pet.all()
+  @rooms = Room.all()
+  @treatments = Treatment.all()
+  erb(:"appointments/new")
+end
+
+post '/appointments' do
+  Appointment.new(params).save
+  redirect to ('/appointments')
+end
