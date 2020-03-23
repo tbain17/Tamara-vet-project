@@ -31,4 +31,45 @@ class Appointment
     @id = appointment['id'].to_i()
   end
 
+  def update()
+    sql = "UPDATE owners SET
+    (
+      pet_id,
+      room_id,
+      treatment_id,
+      time
+    )
+    =
+    (
+      $1, $2, $3, $4
+    )
+    WHERE id = $5"
+    values = [@pet_id, @room_id, @treatment_id, @time, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM appointments"
+    results = SqlRunner.run(sql)
+    return results.map {|appointment| Appointment.new(appointment)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM appointments WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Appointment.new(results.first)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM appointments"
+    SqlRunner.run(sql)
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM appointments WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
 end

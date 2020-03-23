@@ -3,6 +3,7 @@ require_relative("../models/vet")
 require_relative("../models/pet")
 require_relative("../models/room")
 require_relative("../models/treatment")
+require_relative("../models/appointment")
 require("pry-byebug")
 
 Pet.delete_all()
@@ -154,3 +155,20 @@ pet2.save()
 pet3.save()
 pet4.save()
 pet5.save()
+
+appointment1 = Appointment.new(
+  {
+    'pet_id' => pet1.id,
+    'room_id' => room2.id,
+    'treatment_id' => treatment2.id,
+    'time' => "1230"
+  }
+)
+appointment2 = Appointment.new(
+  {
+    'pet_id' => pet3.id,
+    'room_id' => room1.id,
+    'treatment_id' => treatment1.id,
+    'time' => "1430"
+  }
+)
