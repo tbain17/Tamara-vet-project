@@ -48,6 +48,35 @@ class Appointment
     SqlRunner.run(sql, values)
   end
 
+  def pet()
+    sql = "SELECT * FROM pets WHERE id = $1"
+    values = [@pet_id]
+    result = SqlRunner.run(sql, values)
+    return Pet.new(result.first)
+  end
+
+  def room()
+    sql = "SELECT * FROM rooms WHERE id = $1"
+    values = [@room_id]
+    result = SqlRunner.run(sql, values)
+    return Room.new(result.first)
+  end
+
+  def treatment()
+    sql = "SELECT * FROM treatments WHERE id = $1"
+    values = [@treatment_id]
+    result = SqlRunner.run(sql, values)
+    return Treatment.new(result.first)
+  end
+
+  def vet()
+    sql = "SELECT * FROM vets WHERE id = $1"
+    vet_id = self.pet.vet_id
+    values = [vet_id]
+    result = SqlRunner.run(sql, values)
+    return Vet.new(result.first)
+  end
+
   def self.all()
     sql = "SELECT * FROM appointments"
     results = SqlRunner.run(sql)

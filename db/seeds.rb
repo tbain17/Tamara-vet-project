@@ -172,3 +172,5 @@ appointment2 = Appointment.new(
     'time' => "1430"
   }
 )
+appointment1.save()
+appointment2.save()

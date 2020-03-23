@@ -1,1 +1,6 @@
 <h1>Appointments</h1>
+<% for appointment in @appointments %>
+<p>Pet name: <a href="/pets/<%= appointment.pet_id %>"><%= appointment.pet.name %></a></p>
+<a href="/appointments/<%= appointment.id %>/edit">Edit appointment</a>
+<p><% end %></p>
+<a href="/appointments/new">Add New Appointment</a>
