@@ -37,3 +37,8 @@ post '/treatments/:id' do
   Treatment.new(params).update()
   redirect to ('/treatments')
 end
+
+post '/treatments/:id/delete' do
+  Treatment.delete(params[:id].to_i())
+  redirect to('/treatments')
+end

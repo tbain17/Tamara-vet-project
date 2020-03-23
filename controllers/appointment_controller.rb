@@ -43,3 +43,8 @@ post '/appointments/:id' do
   Appointment.new(params).update()
   redirect to ('/appointments')
 end
+
+post '/appointments/:id/delete' do
+  Appointment.delete(params[:id].to_i())
+  redirect to('/appointments')
+end

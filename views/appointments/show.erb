@@ -9,4 +9,6 @@
 <p>Phone: <%= @appointment.pet().owner().phone_number %></p>
 <p>Email: <%= @appointment.pet().owner().email %></p>
 <a href="/appointments/<%= @appointment.id %>/edit">Edit appointment</a>
-<a href="/appointments/<%= @appointment.id %>/delete">Delete appointment</a>
+<form action="/appointments/<%= @appointment.id %>/delete" method="post">
+    <input type="submit" value="Delete room"/>
+</form>
