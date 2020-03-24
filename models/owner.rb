@@ -11,6 +11,7 @@ class Owner
     @last_name = options['last_name']
     @phone_number = options['phone_number']
     @email = options['email']
+    @status = options['status']
   end
 
   def save()
@@ -19,14 +20,15 @@ class Owner
       first_name,
       last_name,
       phone_number,
-      email
+      email,
+      status
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@first_name, @last_name, @phone_number, @email]
+    values = [@first_name, @last_name, @phone_number, @email, @status]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -37,14 +39,15 @@ class Owner
       first_name,
       last_name,
       phone_number,
-      email
+      email,
+      status
     )
     =
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
-    WHERE id = $5"
-    values = [@first_name, @last_name, @phone_number, @email, @id]
+    WHERE id = $6"
+    values = [@first_name, @last_name, @phone_number, @email, @status, @id]
     SqlRunner.run(sql, values)
   end
 

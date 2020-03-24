@@ -92,6 +92,4 @@ class Pet
     SqlRunner.run(sql, values)
   end
 
-
-
 end
