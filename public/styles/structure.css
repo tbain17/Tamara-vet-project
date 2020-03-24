@@ -1,0 +1,43 @@
+body {
+  background: lightgrey;
+  color: white;
+  font-family: arial;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: lightgreen;
+}
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+}
+
+nav ul a{
+  color: green;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  padding: 25px;
+  display: flex;
+}
+
+#content {
+  padding-left: 20px;
+}
+
+
+/* background-size: 100% 20px; */

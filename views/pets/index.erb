@@ -1,4 +1,5 @@
 <h1>Pets of Ruby Vetinary Practice</h1>
+<a href="/pets/new">Add New Pet</a>
 <% for pet in @pets %>
 <p>Name: <a href="/pets/<%= pet.id %>"><%= pet.name %></a></p>
 <p>Type: <%= pet.type %></p>
@@ -8,4 +9,3 @@
 <p>Notes: <%= pet.notes %></p>
 <a href="/pets/<%= pet.id %>/edit">Edit pet</a>
 <p><% end %></p>
-<a href="/pets/new">Add New Pet</a>
