@@ -60,6 +60,16 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+  def reregister()
+    sql = "UPDATE owners SET
+    status
+    =
+    $1
+    WHERE id = $2"
+    values = ['registered', @id]
+    SqlRunner.run(sql, values)
+  end
+
   def joined_name()
     return "#{@first_name} #{@last_name}"
   end

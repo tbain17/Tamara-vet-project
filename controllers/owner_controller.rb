@@ -47,3 +47,8 @@ post '/owners/:id/unregister' do
   Owner.new(params).unregister()
   redirect to('/owners')
 end
+
+post '/owners/:id/reregister' do
+  Owner.new(params).reregister()
+  redirect to('/owners')
+end
