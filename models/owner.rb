@@ -3,7 +3,7 @@ require_relative('../db/sql_runner')
 class Owner
 
   attr_reader :id
-  attr_accessor :first_name, :last_name, :phone_number, :email
+  attr_accessor :first_name, :last_name, :phone_number, :email, :status
 
   def initialize(options)
     @id = options['id'].to_i()
@@ -28,7 +28,7 @@ class Owner
       $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@first_name, @last_name, @phone_number, @email, @status]
+    values = [@first_name, @last_name, @phone_number, @email, 'registered']
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -39,15 +39,24 @@ class Owner
       first_name,
       last_name,
       phone_number,
-      email,
-      status
+      email
     )
     =
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4
     )
-    WHERE id = $6"
-    values = [@first_name, @last_name, @phone_number, @email, @status, @id]
+    WHERE id = $5"
+    values = [@first_name, @last_name, @phone_number, @email, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def unregister()
+    sql = "UPDATE owners SET
+    status
+    =
+    $1
+    WHERE id = $2"
+    values = ['unregistered', @id]
     SqlRunner.run(sql, values)
   end
 

@@ -42,3 +42,8 @@ post '/owners/:id/delete' do
   Owner.delete(params[:id].to_i())
   redirect to('/owners')
 end
+
+post '/owners/:id/unregister' do
+  Owner.new(params).unregister()
+  redirect to('/owners')
+end
