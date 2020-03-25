@@ -1,7 +1,10 @@
 body {
-  background: lightgrey;
+  background: lightpink url('/images/vet_background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
   color: white;
   font-family: arial;
+  font-weight: bold;
 }
 
 a {
