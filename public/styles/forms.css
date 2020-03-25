@@ -1,0 +1,13 @@
+select {
+ width: 150px;
+ margin: 15px 0;
+ font-size: 0.8em;
+
+}
+
+input {
+ width: 150px;
+ padding: 8px 10px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.8em;
+}

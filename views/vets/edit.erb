@@ -1,12 +1,20 @@
+<header>Edit vet details</header>
 <form method = "post" action = "/vets/<%= @vet.id %>">
-  <label for="first-name">First Name:</label>
-    <input id = "first-name" type="text" name="first_name" value="<%= @vet.first_name %>"/>
+  <ul>
+    <ul>
+      <label for="first-name">First Name:</label>
+      <input id = "first-name" type="text" name="first_name" value="<%= @vet.first_name %>"/>
+    </ul>
+    <ul>
+      <label for="last-name">Last Name:</label>
+      <input id = "last-name" type="text" name="last_name" value="<%= @vet.last_name %>"/>
+    </ul>
+    <ul>
+      <label for="specialty">Specialty:</label>
+      <input id = "specialty" type="text" name="specialty" value="<%= @vet.specialty %>"/>
+    </ul>
+  </ul>
 
-  <label for="last-name">Last Name:</label>
-    <input id = "last-name" type="text" name="last_name" value="<%= @vet.last_name %>"/>
-
-  <label for="specialty">Specialty:</label>
-    <input id = "specialty" type="text" name="specialty" value="<%= @vet.specialty %>"/>
 
   <input type="submit" value="Submit Changes"/>
 </form>

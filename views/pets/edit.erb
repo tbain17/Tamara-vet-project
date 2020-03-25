@@ -1,30 +1,39 @@
 <header>Edit pet details</header>
 <form method = "post" action = "/pets/<%= @pet.id %>">
-  <label for="name">Name:</label>
-    <input id = "name" type="text" name="name" value="<%= @pet.name %>"/>
-
-  <label for="type-of-pet">Pet type:</label>
-    <input id = "type-of-pet" type="text" name="type" value="<%= @pet.type %>"/>
-
-  <label for="date-of-birth">Date of Birth:</label>
-    <input id = "date-of-birthr" type="text" name="dob" value="<%= @pet.dob %>"/>
-
-  <label for="owner">Owner:</label>
-    <select id = "owner-select" name="owner_id">
-      <% for owner in @owners %>
-      <option value=<%= owner.id %> <%= "selected" if @pet.owner_id == owner.id %>><%= owner.joined_name() %></option>
-      <% end %>
-    </select>
-
-  <label for="vet">Assign pet to vet:</label>
-    <select id = "vet-select" name="vet_id">
-      <% for vet in @vets %>
-      <option value=<%= vet.id %> <%= "selected" if @pet.vet_id == vet.id %>><%= vet.joined_name() %></option>
-      <% end %>
-    </select>
-
-    <label for="notes">Notes:</label>
-    <input id = "notes" type="text" name="notes" value="<%= @pet.notes %>"/>
+  <ul>
+    <ul>
+      <label for="name">Name:</label>
+      <input id = "name" type="text" name="name" value="<%= @pet.name %>"/>
+    </ul>
+    <ul>
+      <label for="type-of-pet">Pet type:</label>
+      <input id = "type-of-pet" type="text" name="type" value="<%= @pet.type %>"/>
+    </ul>
+    <ul>
+      <label for="date-of-birth">Date of Birth:</label>
+      <input id = "date-of-birthr" type="text" name="dob" value="<%= @pet.dob %>"/>
+    </ul>
+    <ul>
+      <label for="owner">Owner:</label>
+        <select id = "owner-select" name="owner_id">
+          <% for owner in @owners %>
+          <option value=<%= owner.id %> <%= "selected" if @pet.owner_id == owner.id %>><%= owner.joined_name() %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="vet">Assign pet to vet:</label>
+        <select id = "vet-select" name="vet_id">
+          <% for vet in @vets %>
+          <option value=<%= vet.id %> <%= "selected" if @pet.vet_id == vet.id %>><%= vet.joined_name() %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="notes">Notes:</label>
+      <input id = "notes" type="text" name="notes" value="<%= @pet.notes %>"/>
+    </ul>
+  </ul>
 
   <input type="submit" value="Submit changes"/>
 </form>
