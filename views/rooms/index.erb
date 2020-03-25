@@ -1,6 +1,5 @@
-<h1>Rooms of Ruby Vetinary Practice</h1>
+<heading>Rooms of Ruby Vetinary Practice</heading>
+<a href="/rooms/new">Add New Room</a>
 <% for room in @rooms %>
 <p>Name: <a href="/rooms/<%= room.id %>"><%= room.name %></a></p>
-<a href="/rooms/<%= room.id %>/edit">Edit room</a>
 <p><% end %></p>
-<a href="/rooms/new">Add New Room</a>

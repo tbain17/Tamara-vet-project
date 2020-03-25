@@ -1,4 +1,4 @@
-<h1>Pet owners of Ruby Vetinary Practice</h1>
+<header>Pet owners of Ruby Vetinary Practice</header>
 <% for owner in @owners %>
 <p>Name: <a href="/owners/<%= owner.id %>"><%= owner.joined_name() %></a></p>
 <p>Contact number: <%= owner.phone_number%></p>
