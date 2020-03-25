@@ -1,4 +1,4 @@
-<h1>Appointment</h1>
+<header>Appointment details</header>
 <p>Pet name: <a href="/pets/<%= @appointment.pet_id %>"><%= @appointment.pet.name %></a></p>
 <p>Vet name: <a href="/vets/<%= @appointment.vet.id %>"><%= @appointment.vet.joined_name() %></a></p>
 <p>Room: <%= @appointment.room.name %></p>
@@ -10,5 +10,5 @@
 <p>Email: <%= @appointment.pet().owner().email %></p>
 <a href="/appointments/<%= @appointment.id %>/edit">Edit appointment</a>
 <form action="/appointments/<%= @appointment.id %>/delete" method="post">
-    <input type="submit" value="Delete room"/>
+    <input type="submit" value="Delete appointment"/>
 </form>

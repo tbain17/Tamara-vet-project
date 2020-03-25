@@ -42,5 +42,6 @@ main {
   padding-left: 20px;
 }
 
-
-/* background-size: 100% 20px; */
+header  {
+  font-size: 45px
+}
