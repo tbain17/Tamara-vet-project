@@ -1,11 +1,8 @@
 <header>Pets of Ruby Vetinary Practice</header>
 <a href="/pets/new">Add New Pet</a>
 <% for pet in @pets %>
-<p>Name: <a href="/pets/<%= pet.id %>"><%= pet.name %></a></p>
+<a href="/pets/<%= pet.id %>"><div style="background-color:lightpink;color:green;border:2px double pink;border-radius:5px;text-align:center;">
+<p>Name: <%= pet.name %></p>
 <p>Type: <%= pet.type %></p>
-<p>DoB: <%= pet.dob %></p>
-<p>Owner: <%= pet.owner().joined_name() %></p>
-<p>Vet: <%= pet.vet().joined_name() %></p>
-<p>Notes: <%= pet.notes %></p>
-<a href="/pets/<%= pet.id %>/edit">Edit pet</a>
+</div></a>
 <p><% end %></p>

@@ -1,5 +1,5 @@
 <header>Available Treatments</header>
 <a href="/treatments/new">New treatment</a>
 <p><% for treatment in @treatments %></p>
-<p><a href="/treatments/<%= treatment.id %>"><%= treatment.type %></a></p>
+<p><a href="/treatments/<%= treatment.id %>"><%= treatment.type.capitalize() %></a></p>
 <% end %>
