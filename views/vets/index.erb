@@ -2,6 +2,5 @@
 <a href="/vets/new">Add new vet</a>
 <% for vet in @vets %>
 <p>Name: <a href="/vets/<%= vet.id %>"><%= vet.joined_name() %></a></p>
-<p>Specialty: <%= vet.specialty %></p>
-<a href="/vets/<%= vet.id %>/edit">Edit vet</a>
+<p>Specialty: <%= vet.specialty.capitalize() %></p>
 <p><% end %></p>
