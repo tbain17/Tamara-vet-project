@@ -1,28 +1,43 @@
 <header>Edit appointment</header>
 <form method = "post" action = "/appointments/<%= @appointment.id %>">
-  <label for="pet-name">Pet Name:</label>
-    <select id = "pet-select" name="pet_id">
-      <% for pet in @pets %>
-      <option value="<%= pet.id %>" <%= "selected" if pet.id == @appointment.pet_id %>><%= pet.name %></option>
-      <% end %>
-    </select>
-
-  <label for="room">Room:</label>
-    <select id = "room-select" name="room_id">
-      <% for room in @rooms %>
-      <option value="<%= room.id %>" <%= "selected" if room.id == @appointment.room_id %>><%= room.name %></option>
-      <% end %>
-    </select>
-
-  <label for="treatment">Treatment:</label>
-    <select id = "treatment-select" name="treatment_id">
-      <% for treatment in @treatments %>
-      <option value="<%= treatment.id %>" <%= "selected" if treatment.id == @appointment.treatment_id %>><%= treatment.type %></option>
-      <% end %>
-    </select>
-
-  <label for="time">Time:</label>
-    <input id = "time" type="text" name="time" value="<%= @appointment.time %>"/>
+  <ul>
+    <ul>
+      <label for="pet-name">Pet Name:</label>
+        <select id = "pet-select" name="pet_id">
+          <% for pet in @pets %>
+          <option value="<%= pet.id %>" <%= "selected" if pet.id == @appointment.pet_id %>><%= pet.name %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="pet-name">Pet Name:</label>
+        <select id = "pet-select" name="pet_id">
+          <% for pet in @pets %>
+          <option value="<%= pet.id %>" <%= "selected" if pet.id == @appointment.pet_id %>><%= pet.name %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="room">Room:</label>
+        <select id = "room-select" name="room_id">
+          <% for room in @rooms %>
+          <option value="<%= room.id %>" <%= "selected" if room.id == @appointment.room_id %>><%= room.name %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="treatment">Treatment:</label>
+        <select id = "treatment-select" name="treatment_id">
+          <% for treatment in @treatments %>
+          <option value="<%= treatment.id %>" <%= "selected" if treatment.id == @appointment.treatment_id %>><%= treatment.type %></option>
+          <% end %>
+        </select>
+    </ul>
+    <ul>
+      <label for="time">Time:</label>
+        <input id = "time" type="text" name="time" value="<%= @appointment.time %>"/>
+    </ul>
+  </ul>
 
   <input type="submit" value="Submit changes"/>
 </form>

@@ -92,8 +92,20 @@ treatment2 = Treatment.new(
     'type' => 'claw trim'
   }
 )
+treatment3 = Treatment.new(
+  {
+    'type' => 'teeth clean'
+  }
+)
+treatment4 = Treatment.new(
+  {
+    'type' => 'vaccinations'
+  }
+)
 treatment1.save()
 treatment2.save()
+treatment3.save()
+treatment4.save()
 
 pet1 = Pet.new(
   {
@@ -141,7 +153,7 @@ pet4 = Pet.new(
 
 pet5 = Pet.new(
   {
-    'name' => 'Pricilla',
+    'name' => 'Purrdita',
     'dob' => '19/01/2018',
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
