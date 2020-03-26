@@ -114,18 +114,18 @@ pet1 = Pet.new(
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => 'iguana',
-    'notes' => ''
+    'notes' => 'Loves to eat bugs'
   }
 )
 
 pet2 = Pet.new(
   {
-    'name' => 'Hugo',
+    'name' => 'Nemo',
     'dob' => '13/09/2019',
     'vet_id' => vet2.id,
     'owner_id' => owner3.id,
     'type' => 'clown fish',
-    'notes' => ''
+    'notes' => 'Gets lost sometimes'
   }
 )
 
@@ -136,7 +136,7 @@ pet3 = Pet.new(
     'vet_id' => vet2.id,
     'owner_id' => owner1.id,
     'type' => 'guinea pig',
-    'notes' => ''
+    'notes' => 'Bites'
   }
 )
 
@@ -147,7 +147,7 @@ pet4 = Pet.new(
     'vet_id' => vet3.id,
     'owner_id' => owner2.id,
     'type' => 'dog',
-    'notes' => ''
+    'notes' => 'Loves tummy rubs'
   }
 )
 
@@ -158,7 +158,7 @@ pet5 = Pet.new(
     'vet_id' => vet1.id,
     'owner_id' => owner2.id,
     'type' => 'cat',
-    'notes' => ''
+    'notes' => 'Hates other animals'
   }
 )
 
