@@ -8,13 +8,13 @@ body {
 }
 
 a {
-  color: green;
+  color: indigo;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: lightgreen;
+  color: darkviolet;
 }
 
 nav {
@@ -24,7 +24,7 @@ nav {
 }
 
 nav ul a{
-  color: green;
+  color: indigo;
   text-decoration: none;
 }
 
