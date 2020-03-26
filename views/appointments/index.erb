@@ -3,9 +3,11 @@
   <ul>
     <% for appointment in @appointments %>
     <ul>
-      <p><a href="/appointments/<%= appointment.id %>">Appointment <%= appointment.id %></a></p>
-      <p>Pet name: <a href="/pets/<%= appointment.pet_id %>"><%= appointment.pet.name %></a></p>
+      <a href="/appointments/<%= appointment.id %>"><div style="background-color:lightpink;color:white;border:2px double pink;border-radius:5px;text-align:center;">
+      <p>Appointment <%= appointment.id %></p>
+      <p>Pet name:<%= appointment.pet.name %></p>
       <p>Time: <%= appointment.time %></p>
+      </div></a>
     </ul>
     <p><% end %></p>
 
