@@ -2,15 +2,7 @@
 <form method = "post" action = "/appointments/<%= @appointment.id %>">
   <ul>
     <ul>
-      <label for="pet-name">Pet Name:</label>
-        <select id = "pet-select" name="pet_id">
-          <% for pet in @pets %>
-          <option value="<%= pet.id %>" <%= "selected" if pet.id == @appointment.pet_id %>><%= pet.name %></option>
-          <% end %>
-        </select>
-    </ul>
-    <ul>
-      <label for="pet-name">Pet Name:</label>
+      <label for="pet-select">Pet Name:</label>
         <select id = "pet-select" name="pet_id">
           <% for pet in @pets %>
           <option value="<%= pet.id %>" <%= "selected" if pet.id == @appointment.pet_id %>><%= pet.name %></option>
